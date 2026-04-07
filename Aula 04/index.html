@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InovaWeb</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Comentário -->
+    <h1>InovaWeb</h1>
+    <h3>A Sua loja de tecnologia pronto para inovar a sua vida</h3>
+    <p>Criamos site morderno, responsivos e inovadores para <br>
+        sua empresase destacar no mercado digital</p>
+    <img src="./cavaleira.png" alt="banner do site" width="400">  
+     <h3>Lista de Serviços</h3>
+        <ul class="lista">
+            <li>Criação de sites personalizados</li>
+            <li>Desenvolvimento de lojas virtuais</li>
+            <li>Otimização para motores de busca (SEO)</li>
+            <li>Hospedagem e manutenção de sites</li>
+        </ul>
+        <ol>
+            <li>Criação de sites personalizados</li>
+            <li>Desenvolvimento de lojas virtuais</li>
+            <li>Otimização para motores de busca (SEO)</li>
+            <li>Hospedagem e manutenção de sites</li>
+        </ol>   
+        <table border="1">
+            <caption>Serviços e Preços</caption>
+            <thead>
+                <tr>
+                    <th>Serviço</th>
+                    <th>Descrição</th>
+                    <th>Preço</th>
+                </tr>
+            </thead>
+            <tr>
+                <td>Criação de sites personalizados</td>
+                <td>Desenvolvimento de sites sob medida para atender às necessidades do cliente.</td>
+                <td>R$ 2.000,00</td>
+            </tr>
+            <tr>
+                <td>Desenvolvimento de lojas virtuais</td>
+                <td>Criação de plataformas de comércio eletrônico para vender produtos online.</td>
+                <td>R$ 3.500,00</td>
+            </tr>
+            <tr>
+                <td>Otimização para motores de busca (SEO)</td>
+                <td>Aprimoramento do site para melhorar o posicionamento nos resultados de busca.</td>
+                <td>R$ 1.500,00</td>
+            </tr>
+            <tr>
+                <td>Hospedagem e manutenção de sites</td>
+                <td>Serviços de hospedagem e suporte técnico para garantir o funcionamento do site.</td>
+                <td>R$ 500,00/mês</td>
+            </tr>
+        </table>
+        <br>
+        <br>
+        <hr>
+
+        <h3>Formulário de Contato</h3>
+        <form action="enviar.php" method="post">
+            <label for="nome">Nome:</label><br>
+            <input type="text" id="nome" name="nome" required placeholder="Nome"><br>
+
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email" required placeholder="Email"><br>
+
+            <label for="mensagem">Mensagem:</label><br>
+            <textarea id="mensagem" name="mensagem" rows="4" cols="50" placeholder="Digite sua mensagem aqui..."></textarea><br>
+            <input type="submit" value="Enviar">
+        
+
+        <style>
+            .lista {
+                list-style-type: none;
+            }
+        </style>
+
+</body>
+</html>

@@ -1,0 +1,110 @@
+/*09/04/2026
+/*Aula 06
+
+/*>>>>>>>>>>>>>>>>>>>>>>CSS Inicial
+
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  color: #2e2e2e;
+  line-height: 1.6;
+  padding: 40px;
+  background: #f8f9fa;
+}
+
+h1 {
+  font-size: 2rem;
+  color: #0066cc;
+  margin-bottom: 8px;
+}
+
+h2 {
+  font-size: 1.5rem;
+  color: #003366;
+  margin: 40px 0 16px;
+  border-left: 4px solid #0066cc;
+  padding-left: 12px;
+}
+
+h3 {
+  font-size: 1rem;
+  color: #0066cc;
+  margin: 24px 0 8px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+p {
+  margin-bottom: 12px;
+  max-width: 700px;
+}
+
+/* Caixa de exemplo visual */
+.exemplo {
+  background: #ffffff;
+  border: 1px solid #dee2e6;
+  border-radius: 8px;
+  padding: 24px;
+  margin: 16px 0 32px;
+}
+
+/* Caixas coloridas para demonstração */
+.caixa {
+  background: #0066cc;
+  color: white;
+  padding: 16px;
+  margin: 8px;
+  font-weight: bold;
+  border-radius: 4px;
+}
+
+.caixa-b {
+  background: #6c63ff;
+}
+.caixa-c {
+  background: #00b4d8;
+}
+
+/* Separador de seção */
+section {
+  border-bottom: 2px solid #dee2e6;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+}
+
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+} /*reolve o problema do float, fazendo com que o elemento pai reconheça a altura dos filhos flutuantes */
+
+.caixa-flutuante {
+  background-color: blue; 
+  color: white; 
+  float: left;
+  margin: 10px 10px 10px 0px;/* Adiciona margem para evitar que as caixas fiquem coladas. Cria espaçamento entre elas externamente */
+  padding: 10px; /* Adiciona preenchimento interno para que o texto não fique colado às bordas da caixa. Cria espaçamento entre o conteúdo e as bordas da caixa */
+  border-radius: 5px; /* Adiciona bordas arredondadas para um visual mais suave e moderno, melhorando a estética da caixa */
+  transition: 1s; /* Adiciona uma transição suave para as mudanças de estilo quando o mouse estiver sobre a caixa */
+}
+
+.caixa-flutuante:hover {
+  background-color: darkblue; /* Altera a cor de fundo para um tom mais escuro de azul quando o mouse estiver sobre a caixa */
+  color: yellow; /* Mantém a cor do texto branca para garantir boa legibilidade mesmo com a mudança de cor de fundo */
+  transition: 1s; /* Garante que a transição suave seja aplicada tanto na entrada quanto na saída do hover, criando um efeito visual agradável ao passar o mouse sobre a caixa */
+  transform: scale(1.2); /* Aumenta o tamanho da caixa em 20% quando o mouse estiver sobre ela, criando um efeito de zoom suave */
+}
+
+  /*padding: 10px; /* Adiciona preenchimento interno para criar um espaço entre o conteúdo da div e suas bordas. Isso ajuda a evitar que o conteúdo fique colado às bordas da div, melhorando a legibilidade e a estética geral. */
+
+
+/* Comentário explicando as funcionalidades do position: relative, absolute e fixed */
+/* position: relative - move o elemento em relação à sua posição original */
+/* position: absolute - move o elemento em relação ao seu elemento pai mais próximo posicionado */
+/* position: fixed - move o elemento em relação à janela do navegador, mantendo-o na mesma posição durante o scroll */

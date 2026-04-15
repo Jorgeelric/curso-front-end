@@ -1,0 +1,5 @@
+mt =top
+mb = baixo
+ms = esquerda
+me = direita
+

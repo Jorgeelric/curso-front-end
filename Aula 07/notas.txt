@@ -3,3 +3,10 @@ mb = baixo
 ms = esquerda
 me = direita
 
+root {
+    Criamos variáveis de cores. Para criar tem que colocar -- + o nome 
+}
+
+Para chamar a variável é com o var(--)
+
+https://icons.getbootstrap.com/icons/whatsapp/

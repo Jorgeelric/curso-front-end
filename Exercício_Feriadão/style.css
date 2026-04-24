@@ -1,0 +1,339 @@
+/* ================= RESET & BASE ================= */
+body {
+    margin: 0;
+    background: #000;
+    font-family: Arial, sans-serif;
+}
+
+/* ================= NAVBAR ================= */
+.navbar {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 3;
+    background: transparent;
+    padding: 1rem 2rem;
+}
+
+/* Links da navbar */
+.navbar .nav-link,
+.navbar .navbar-brand {
+    color: #fff !important;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+.navbar .nav-link:hover {
+    color: #ccc !important;
+}
+
+/* ================= BANNER / HERO ================= */
+.banner {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Imagem de fundo */
+.banner img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+}
+
+/* Overlay escuro para contraste */
+.banner::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background:
+        linear-gradient(to bottom, transparent 70%, rgba(0, 0, 0, 0.8)),
+        linear-gradient(to right, rgba(0, 0, 0, 0.85) 20%, transparent 80%);
+}
+
+/* ================= CONTEÚDO DO BANNER ================= */
+.conteudo {
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    transform: translateY(-50%);
+    z-index: 2;
+
+    color: #fff;
+    max-width: 500px;
+    width: min(500px, 90vw);
+    padding: 1rem;
+
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.7);
+
+    /* animação */
+    opacity: 0;
+    animation: fadeIn 0.8s ease forwards;
+}
+
+.conteudo h1 {
+    font-size: clamp(2rem, 4vw, 3rem);
+    margin-bottom: 10px;
+}
+
+.conteudo p {
+    margin-bottom: 15px;
+    line-height: 1.5;
+    font-size: clamp(1rem, 2vw, 1.1rem);
+}
+
+/* ================= BOTÕES ================= */
+.conteudo button {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+
+    margin-right: 10px;
+    margin-bottom: 10px;
+    padding: 10px 18px;
+
+    border: none;
+    border-radius: 0.35rem;
+    cursor: pointer;
+
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+/* Primário */
+.conteudo button:first-child {
+    background: #fff;
+    color: #000;
+}
+
+/* Secundário */
+.conteudo button:last-child {
+    background: rgba(255, 255, 255, 0.2);
+    color: #fff;
+}
+
+/* Hover geral */
+.conteudo button:hover {
+    transform: scale(1.05);
+    opacity: 0.9;
+}
+
+/* ================= ANIMAÇÕES ================= */
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(-50%);
+    }
+}
+
+/* ================= CARDS ================= */
+.anime-card {
+    background: transparent;
+    border: none;
+    color: #fff;
+    transition: transform 0.3s ease;
+}
+
+/* Imagem padrão (16:9) */
+.anime-card img {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+/* Texto */
+.anime-card .card-text {
+    font-size: 0.9rem;
+    margin-top: 5px;
+}
+
+/* Hover estilo Netflix */
+.anime-card:hover {
+    transform: scale(1.08);
+    z-index: 2;
+}
+
+/* ================= CARROSSEL ================= */
+.carousel-wrapper {
+    overflow: hidden;
+}
+
+#cardsContainer {
+    overflow-x: auto;
+    scroll-behavior: smooth;
+}
+
+/* Scroll custom */
+.row::-webkit-scrollbar {
+    height: 6px;
+}
+
+.row::-webkit-scrollbar-thumb {
+    background: #444;
+    border-radius: 10px;
+}
+
+/* Remove scrollbar visual */
+#cardsContainer::-webkit-scrollbar {
+    display: none;
+}
+
+/* Botões laterais */
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 5;
+
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    border: none;
+
+    font-size: 2rem;
+    padding: 10px 15px;
+    cursor: pointer;
+
+    transition: background 0.2s ease;
+}
+
+.carousel-btn:hover {
+    background: rgba(0, 0, 0, 0.85);
+}
+
+.carousel-btn.left {
+    left: 0;
+}
+
+.carousel-btn.right {
+    right: 0;
+}
+
+/* ================= TABELA ================= */
+.table-responsive {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 1rem;
+    padding: 1rem;
+    margin-top: 2rem;
+
+    box-shadow: 0 18px 45px rgba(0, 0, 0, 0.25);
+    overflow: hidden;
+}
+
+.table-responsive .table {
+    color: #f5f5f5;
+    border-collapse: separate;
+    border-spacing: 0;
+}
+
+/* Células */
+.table-responsive th,
+.table-responsive td {
+    border-top: 0;
+    padding: 1rem 0.9rem;
+    vertical-align: middle;
+}
+
+/* Linhas alternadas */
+.table-striped > tbody > tr:nth-of-type(odd) {
+    background-color: rgba(255, 255, 255, 0.04);
+}
+
+/* Hover */
+.table-hover > tbody > tr:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Cabeçalho */
+.table-dark thead th {
+    background: rgba(255, 255, 255, 0.08);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+    color: #fff;
+}
+
+/* ================= FOOTER ================= */
+.footer {
+    background: rgba(10, 10, 10, 0.95);
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    color: #ddd;
+    padding: 2.5rem 0 2rem;
+}
+
+.footer h5 {
+    color: #fff;
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.footer p {
+    color: rgba(255, 255, 255, 0.68);
+    max-width: 500px;
+}
+
+/* Links */
+.footer-link {
+    color: rgba(255, 255, 255, 0.75);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+.footer-link:hover {
+    color: #fff;
+}
+
+/* ================= RESPONSIVO ================= */
+@media (max-width: 768px) {
+
+    /* Banner */
+    .conteudo {
+        left: 50%;
+        top: 55%;
+        transform: translate(-50%, -50%);
+        width: 90%;
+    }
+
+    .conteudo button {
+        width: 100%;
+        margin-right: 0;
+    }
+
+    /* Tabela */
+    .table-responsive {
+        padding: 0.75rem;
+    }
+
+    .table-responsive th,
+    .table-responsive td {
+        padding: 0.8rem 0.6rem;
+    }
+
+    /* Footer */
+    .footer {
+        padding: 2rem 1rem;
+    }
+
+    .footer-links {
+        justify-content: center !important;
+    }
+}
+
+@media (max-width: 576px) {
+    .banner {
+        height: 80vh;
+    }
+
+    .conteudo h1 {
+        font-size: 1.75rem;
+    }
+
+    .conteudo p {
+        font-size: 0.95rem;
+    }
+}

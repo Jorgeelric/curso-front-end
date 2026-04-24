@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <!-- META -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- TITLE -->
+    <title>AnimeShow</title>
+
+    <!-- BOOTSTRAP CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- BOOTSTRAP ICONS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+
+    <!-- CUSTOM CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+    <header>
+        <nav class="navbar navbar-expand-lg" aria-label="Menu principal">
+            <div class="container-fluid">
+
+                <!-- LOGO -->
+                <a class="navbar-brand text-white" href="#">AnimeShow</a>
+
+                <!-- BOTÃO MOBILE -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNav" aria-label="Abrir menu">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- MENU -->
+                <div class="collapse navbar-collapse" id="navbarNav">
+
+                    <!-- MENU CENTRAL -->
+                    <ul class="navbar-nav mx-auto">
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="#">Início</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="#">Animes</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="#">Jogos</a>
+                        </li>
+                    </ul>
+
+                    <!-- AÇÕES (DIREITA) -->
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="#" aria-label="Buscar">
+                                <i class="bi bi-search"></i>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="#" aria-label="Notificações">
+                                <i class="bi bi-bell"></i>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="#" aria-label="Perfil">
+                                <i class="bi bi-person-circle"></i>
+                            </a>
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- ================= CONTEÚDO PRINCIPAL ================= -->
+    <main>
+
+        <!-- ===== BANNER / HERO ===== -->
+        <section class="banner" aria-label="Destaque principal">
+            <img src="https://cdn.ome.lt/dvpew17NnqwtGYBG15eJcRC76qQ=/1200x630/smart/filters:format(webp)/extras/conteudos/witch-hat-atelier-anime-tudo-sobre.jpg"
+                alt="Capa do anime Witch Hat Atelier" style="width: 100%; height: auto; object-fit: contain;">
+
+            <div class="container">
+                <div class="col-12 col-md-6 col-lg-4">
+                    <article class="conteudo">
+                        <h1>Witch Hat Atelier</h1>
+
+                        <p>
+                            Em um mundo onde a magia é real, uma jovem garota chamada Coco sonha em se tornar uma bruxa.
+                            Ela se matricula na prestigiada Academia de Magia, onde enfrenta desafios, faz amizades e
+                            descobre os segredos do mundo mágico.
+                        </p>
+
+                        <!-- BOTÕES DE AÇÃO -->
+                        <div class="d-flex gap-2">
+                            <button class="btn btn-primary">▶ Assistir</button>
+                            <button class="btn btn-outline-light">Mais informações</button>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== CARROSSEL DE ANIMES ===== -->
+        <section class="container-fluid mt-5 position-relative" aria-label="Animes em alta">
+
+            <h2 class="text-white mb-4">Animes em alta</h2>
+
+            <!-- BOTÃO ESQUERDA -->
+            <button class="carousel-btn left" onclick="scrollCards(-1)" aria-label="Rolar para esquerda">‹</button>
+
+            <!-- WRAPPER -->
+            <div class="carousel-wrapper">
+                <div class="row g-3 flex-nowrap" id="cardsContainer">
+
+                    <!-- CARD ITEM -->
+                    <div class="col-10 col-sm-8 col-md-6 col-lg-4 col-xl-3">
+                        <article class="card anime-card">
+                            <img src="https://cdn.ome.lt/dvpew17NnqwtGYBG15eJcRC76qQ=/1200x630/smart/filters:format(webp)/extras/conteudos/witch-hat-atelier-anime-tudo-sobre.jpg"
+                                class="card-img-top" alt="Witch Hat Atelier">
+                            <div class="card-body">
+                                <p class="card-text">Witch Hat Atelier</p>
+                            </div>
+                        </article>
+                    </div>
+
+                    <!-- CARD ITEM -->
+                    <div class="col-10 col-sm-8 col-md-6 col-lg-4 col-xl-3">
+                        <article class="card anime-card">
+                            <img src="https://images.immediate.co.uk/production/volatile/sites/3/2026/04/CLES4BaseAssetKV11x13000x3000Copyrighten-US-81ffcad-e1775035967540.png"
+                                class="card-img-top" alt="Classroom of the Elite">
+                            <div class="card-body">
+                                <p class="card-text">Classroom of the Elite</p>
+                            </div>
+                        </article>
+                    </div>
+
+                    <!-- CARD ITEM -->
+                    <div class="col-10 col-sm-8 col-md-6 col-lg-4 col-xl-3">
+                        <article class="card anime-card">
+                            <img src="https://ovicio.com.br/wp-content/uploads/2025/09/20250926-frieren-e-a-jornada-para-o-alem-temporada-2-poster-ovicio-725x1024.webp"
+                                class="card-img-top" alt="Frieren: E a Jornada para o Além">
+                            <div class="card-body">
+                                <p class="card-text">Frieren: E a Jornada para o Além</p>
+                            </div>
+                        </article>
+                    </div>
+
+                    <!-- CARD ITEM -->
+                    <div class="col-10 col-sm-8 col-md-6 col-lg-4 col-xl-3">
+                        <article class="card anime-card">
+                            <img src="https://sm.ign.com/t/ign_in/screenshot/default/fire-force-season-3-feature_8pj9.1200.jpg"
+                                class="card-img-top" alt="Fire Force">
+                            <div class="card-body">
+                                <p class="card-text">Fire Force</p>
+                            </div>
+                        </article>
+                    </div>
+
+                    <!-- CARD ITEM -->
+                    <div class="col-10 col-sm-8 col-md-6 col-lg-4 col-xl-3">
+                        <article class="card anime-card">
+                            <img src="https://ovicio.com.br/wp-content/uploads/2025/11/20251107-poster-oficial-da-temporada-3-de-jujutsu-kaisen-ovicio-722x1024.webp"
+                                class="card-img-top" alt="Jujutsu Kaisen">
+                            <div class="card-body">
+                                <p class="card-text">Jujutsu Kaisen</p>
+                            </div>
+                        </article>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- BOTÃO DIREITA -->
+            <button class="carousel-btn right" onclick="scrollCards(1)" aria-label="Rolar para direita">›</button>
+
+        </section>
+
+        <!-- ===== TABELA DE PLANOS ===== -->
+        <section class="container mt-5" aria-label="Tabela de planos">
+            <div class="table-responsive">
+
+                <table class="table table-striped table-hover">
+
+                    <thead class="table-dark">
+                        <tr>
+                            <th scope="col">Planos</th>
+                            <th scope="col">Cobertura</th>
+                            <th scope="col">Preços</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td>Plano Básico</td>
+                            <td>Acesso a 100 animes</td>
+                            <td>R$ 19,90/mês</td>
+                        </tr>
+
+                        <tr>
+                            <td>Plano Premium</td>
+                            <td>Acesso a 500 animes + conteúdo exclusivo</td>
+                            <td>R$ 39,90/mês</td>
+                        </tr>
+
+                        <tr>
+                            <td>Plano Família</td>
+                            <td>Acesso a 1000 animes + 4 contas simultâneas</td>
+                            <td>R$ 79,90/mês</td>
+                        </tr>
+                    </tbody>
+
+                </table>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="footer mt-5" role="contentinfo">
+        <div class="container">
+
+            <div class="row align-items-center gy-3">
+
+                <!-- DESCRIÇÃO -->
+                <div class="col-md-6">
+                    <h5>AnimeShow</h5>
+                    <p class="mb-0 text-muted">
+                        Conteúdo selecionado, visual moderno e navegação simples para fãs de anime.
+                    </p>
+                </div>
+
+                <!-- LINKS -->
+                <nav class="col-md-6 d-flex justify-content-md-end gap-3 footer-links"
+                    aria-label="Links do rodapé">
+                    <a href="#" class="footer-link">Início</a>
+                    <a href="#" class="footer-link">Animes</a>
+                    <a href="#" class="footer-link">Jogos</a>
+                </nav>
+
+            </div>
+
+            <!-- COPYRIGHT -->
+            <div class="row">
+                <div class="col text-center text-md-start mt-4 text-muted small">
+                    &copy; 2026 AnimeShow. Todos os direitos reservados.
+                </div>
+            </div>
+
+        </div>
+    </footer>
+
+    <!-- ================= SCRIPT ================= -->
+    <script>
+        // Função para rolar os cards horizontalmente
+        function scrollCards(direction) {
+            const container = document.getElementById("cardsContainer");
+
+            // Calcula largura do card + gap
+            const cardWidth = container.querySelector('.col-10').offsetWidth + 16;
+
+            container.scrollBy({
+                left: direction * cardWidth * 2,
+                behavior: "smooth"
+            });
+        }
+    </script>
+
+    <!-- BOOTSTRAP JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

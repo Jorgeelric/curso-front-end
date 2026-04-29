@@ -1,0 +1,5 @@
+https://github.com/Mudows/curso-frontend
+
+w3c é para verificar a semântica do código. E também ensina as boas práticas de como escrever código. 
+
+Código espaquete 

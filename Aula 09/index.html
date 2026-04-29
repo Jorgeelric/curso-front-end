@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 09</title>
+
+    <!-- BOOTSTRAP CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- BOOTSTRAP ICONS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+
+</head>
+
+<body>
+    <div class="alert alert-success"><i class="bi bi-check-circle me-2"></i>
+        <strong>alert-success</strong> - mensagem enviada com sucesso!
+    </div>
+
+    <div class="alert alert-danger"><i class="bi bi-check-circle me-2"></i>
+        <strong>alert-Erro</strong> - Erro ao processar a solicitação!
+    </div>
+
+    <div class="alert alert-warning"><i class="bi bi-exclamation-triangle me-2"></i>
+        <strong>alert-Atenção</strong> - Verifique as informações!
+    </div>
+
+    <div class="alert alert-info mb-0"><i class="bi bi-info-circle me-2"></i>
+        <strong>alert-success</strong> - Informações importantes
+    </div>
+
+    <div class="alert alert-success alert-dismissible fade show mt-2"><i class="bi bi-info-circle me-2"></i>
+        <strong>alert-success</strong> - Informações importantes
+
+        <button type="button" class="btn-close" data-bs-dismiss="alert" arial-label="Fechar">
+        </button>
+    </div>
+
+    <div class="card shadow-sm h-100">
+        <img src="https://placehold.co/400x180/004a99/ffffff?text=Devil+May+Cry" class="card-img-top"
+            alt="Banner do serviço de Desenvolvimento Web da inovaWeb">
+    </div>
+
+    <div id="carrosselRef" class="carousel slide" data-bs-ride="carousel">
+
+        <div class="carousel-indicators">
+            <button data-bs-target="#carrosselRef" data-bs-slide-to="0" class="active" aria-label="Slide 1"></button>
+            <button data-bs-target="#carrosselRef" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button data-bs-target="#carrosselRef" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+
+        <div class="carousel-inner">
+
+
+            <div class="carousel-item active">
+                <img src="https://placehold.co/900x300/004a99/ffffff?text=Slide+1+Desenvolvimento+Web"
+                    class="d-block w-100" alt="Slide 1: Desenvolvimento Web">
+                <!--
+              carousel-caption: legenda sobreposta à imagem (posição absoluta)
+              d-none d-md-block: esconde em mobile, exibe tablet+ (≥768px)
+              Motivo: em telas pequenas a imagem fica comprimida e
+              a legenda torna-se ilegível ou sobrepõe muito o conteúdo.
+            -->
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Desenvolvimento Web</h5>
+                    <p>Sites modernos e responsivos com IA.</p>
+                </div>
+            </div>
+
+            <!-- SLIDE 2 -->
+            <div class="carousel-item">
+                <img src="https://placehold.co/900x300/6C63FF/ffffff?text=Slide+2+Design+com+IA" class="d-block w-100"
+                    alt="Slide 2: Design com IA">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Design com Inteligência Artificial</h5>
+                    <p>Layouts gerados e otimizados com IA.</p>
+                </div>
+            </div>
+
+            <!-- SLIDE 3 -->
+            <div class="carousel-item">
+                <img src="https://placehold.co/900x300/003366/ffffff?text=Slide+3+Consultoria+Digital"
+                    class="d-block w-100" alt="Slide 3: Consultoria Digital">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Consultoria Digital</h5>
+                    <p>Estratégia de presença digital para seu negócio.</p>
+                </div>
+            </div>
+
+        </div><!-- /carousel-inner -->
+
+        <button class="carousel-control-prev" data-bs-target="#carrosselRef" data-bs-slide="prev"
+            aria-label="Slide anterior">
+            <span class="carousel-control-prev-icon"></span>
+        </button>
+
+        <button class="carousel-control-next" data-bs-target="#carrosselRef" data-bs-slide="next"
+            aria-label="Próximo slide">
+            <span class="carousel-control-next-icon"></span>
+        </button>
+
+    </div><!-- /carrossel -->
+
+
+
+
+
+
+    <!-- BOOTSTRAP JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

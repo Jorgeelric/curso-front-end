@@ -1,0 +1,7 @@
+O código percorre o array listaCompras de duas formas diferentes para exibir seus elementos no console.
+
+No primeiro for, utiliza-se um laço tradicional com índice (i), que começa em 0 e vai até o tamanho do array (listaCompras.length). A cada iteração, ele imprime uma linha separadora, o índice atual e o item correspondente no array.
+
+No segundo for, é usado o for...of, que percorre diretamente os valores do array sem precisar de índice. Em cada repetição, ele imprime uma linha separadora e o item atual.
+
+Em resumo: o primeiro laço dá acesso ao índice e ao valor; o segundo simplifica a leitura ao trabalhar apenas com os valores.

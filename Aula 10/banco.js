@@ -1,55 +1,55 @@
-const numero_conta = 1
-let titular = "Jorge Gàlddino"
-let saldo = 1895.45
-let conta_ativa = false // Valor boleano também como boolean
-let status_conta
-
+const numeroConta = 1
+let titular = "Jorge"
+let saldo = 1000
+let contaAtiva = true
+let statusConta
 function verExtrato() {
-    if (conta_ativa) {
-        status_conta = 'Ativada'
+    if (contaAtiva) {
+        statusConta = "Ativa"
     } else {
-        status_conta = "Bloqueado"
+        statusConta = "Bloqueado"
     }
-    
-    console.log("==== BANCO INOVABANK ====")
-    console.log(`Conta: ${numero_conta}`)
+
+
+    console.log("======Banco InovaBank===== ")
+    console.log(`Conta: ${numeroConta}`)
     console.log(`Titular: ${titular}`)
     console.log(`Saldo: R$ ${saldo.toFixed(2)}`)
-    console.log(`Status: ${status_conta}`)
+    console.log(`Status: ${statusConta}`)
+
 }
 
 function depositar(valor) {
     if (valor > 0) {
         saldo = saldo + valor
-        console.log(`\nDepósito de R$ ${valor.toFixed(2)} realizado com sucesso!`)
-        console.log(`Novo saldo: R$ ${saldo}`)
+        console.log(`\ndeposito de R$ ${valor.toFixed(2)} realizado com sucesso!`)
+        console.log(`Novo saldo:R$ ${saldo.toFixed(2)}`)
     } else {
-        console.log("\nValor inválido. O valor deve ser maior que zero.")
+        console.log("\nValor de deposito invalido, o valor deve ser maior que zero.")
     }
 }
 
-
+depositar(500)
+depositar(3000)
+depositar(-100)
+depositar(-500)
 
 function sacar(valor) {
     if (valor > 0 && valor <= saldo) {
         saldo -= valor
-        console.log(`\nSaque de R$ ${valor.toFixed(2)} realizado com sucesso. O valor atual agora é de R$ ${saldo}`)
+        console.log(`\nSaque de R$ ${valor.toFixed(2)} realizado com sucesso!\nNovo saldo: R$ ${valor.toFixed(2)}`)
     } else {
-        console.log("\nValor de saque inválido. O valor deve ser maior que zero e menor ou igual ao saldo ")
+        console.log("\nValor de saque invalido. o Valor deve ser maior que maior que zero e menor ou igual ao saldo")
     }
 }
 
-function bloquearConta(){
-    if (conta_ativa === true) {
-        console.log("\nAcesso a conta realizada com sucesso")
-    } else {
-        console.log("\nAcesso a conta negada! Conta bloqueada, verefique com o seu gerente. ")
+function bloquearConta() {   
+contaAtiva = true;
+        console.log("\nConta Bloqueada!");
+    
     }
-}
-
 bloquearConta()
 verExtrato()
-depositar(1585)
-sacar(458)
+depositar(100)
+sacar(4600)
 verExtrato()
-

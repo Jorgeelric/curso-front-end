@@ -53,6 +53,14 @@ const elTotalTransacoes = document.querySelector('#total-transacoes')
 // Lista do histórico de transações
 const historicoTransacoes = document.querySelector('#lista-historico')
 
+const btnLimpar = document.querySelector('#btn-limpar')
+
+const inputTitular = document.querySelector('#titular-alterar')
+
+const btnAlterar = document.querySelector('#btn-alterar')
+
+const elTitular = document.querySelector('#titular')
+
 
 
 // ===============================
@@ -72,7 +80,35 @@ btnDepositar.addEventListener('click', () => {
     depositar(valor)
 })
 
+btnAlterar.addEventListener('click', () => {
 
+    // Captura o texto digitado
+    const novoTitular = inputTitular.value
+
+    // Verifica se não está vazio
+    if(novoTitular !== '') {
+
+        // Atualiza o nome no HTML
+        elTitular.textContent = novoTitular
+
+        // Atualiza variável JS
+        titular = novoTitular
+
+        // Limpa o input
+        inputTitular.value = ''
+    }
+})
+
+btnLimpar.addEventListener('click', () => {
+    historico.length = 0
+
+    historicoTransacoes.innerHTML = ''
+
+    const itemVazio = document.createElement('li')
+    itemVazio.classList.add('historico-vazio')
+    itemVazio.textContent = 'Nenhuma transação ainda.'
+    historicoTransacoes.appendChild(itemVazio)
+})
 // Quando clicar no botão de sacar
 btnSacar.addEventListener('click', () => {
 
@@ -128,7 +164,24 @@ function verExtrato() {
     console.log(`Status: ${statusConta}`)
 }
 
-
+function atualizarExtrato(transacao) {
+    historico.push(transacao)
+    const elListaVazia = document.querySelector('.historico-vazio')
+    if (elListaVazia) elListaVazia.remove()
+  
+    const item = document.createElement('li')
+    item.textContent = transacao
+    historicoTransacoes.insertBefore(item, historicoTransacoes.firstChild)
+  
+    while (historicoTransacoes.children.length > 5) {
+        historicoTransacoes.removeChild(historicoTransacoes.lastChild)
+    }
+  
+    /* for (let i = 1; i < 6; i++) {
+      const item = historico[historico.length - i];
+      // console.log(item);
+    } */
+  }
 
 
 // ===============================
@@ -157,7 +210,7 @@ function depositar(valor) {
         saldo = saldo + valor
 
         // Adiciona o depósito no histórico
-        historico.push(
+        atualizarExtrato(
             `Depósito: R$ ${valor.toFixed(2)} | Saldo: ${saldo.toFixed(2)}`
         )
 
@@ -186,6 +239,7 @@ function depositar(valor) {
 }
 
 
+
 // ===============================
 // FUNÇÃO DE SAQUE
 // ===============================
@@ -210,7 +264,7 @@ function sacar(valor) {
         saldo -= valor
 
         // Salva movimentação no histórico
-        historico.push(
+        atualizarExtrato(
             `Saque: R$ ${valor.toFixed(2)} | Saldo: R$ ${saldo.toFixed(2)}`
         )
 
@@ -332,7 +386,24 @@ function atualizarSaldo(){
 
     // Atualiza saldo visual formatado
     elSaldo.textContent = `R$ ${saldo.toFixed(2)}`
+
+    // Saldo alto
+    if(saldo > 5000) {
+
+        elSaldo.style.color = 'green'
+
+    // Saldo médio
+    } else if(saldo > 1000 && saldo <= 5000) {
+
+        elSaldo.style.color = 'yellow'
+
+    // Saldo baixo
+    } else {
+
+        elSaldo.style.color = 'red'
+    }
 }
+
 
 
 // ===============================

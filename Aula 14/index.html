@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>Batalha Naval — InovaWeb Games</title>
+
+  <!-- Bootstrap -->
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+  >
+
+  <!-- Bootstrap Icons -->
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+  >
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+
+  <!-- CABEÇALHO -->
+  <header class="cabecalho text-center py-4">
+
+    <h1 class="titulo-jogo mb-0">
+      <i class="bi bi-crosshair me-2"></i>
+      Batalha Naval
+    </h1>
+
+    <p class="subtitulo mb-0">
+      InovaWeb Games
+    </p>
+
+  </header>
+
+
+  <!-- CONTEÚDO -->
+  <main class="container py-4">
+
+    <div class="row justify-content-center g-4">
+
+      <!-- JOGO -->
+      <div class="col-12 col-lg-7">
+
+        <div class="card-jogo p-4">
+
+          <!-- mensagem -->
+          <div
+            id="mensagem"
+            class="mensagem text-center mb-3"
+          >
+            Clique em uma célula para atirar.
+          </div>
+
+          <!-- tabuleiro -->
+          <div
+            id="tabuleiro"
+            class="tabuleiro mx-auto mb-4"
+          ></div>
+
+          <!-- rodapé -->
+          <div
+            class="d-flex justify-content-between align-items-center"
+          >
+
+            <span
+              id="tentativas"
+              class="tentativas"
+            >
+              Tentativas: 0
+            </span>
+
+            <button
+              id="btn-reiniciar"
+              class="btn btn-reiniciar"
+            >
+              <i class="bi bi-arrow-counterclockwise me-2"></i>
+              Reiniciar
+            </button>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <!-- INSTRUÇÕES -->
+      <div class="col-12 col-lg-4">
+
+        <div class="card-instrucoes p-4">
+
+          <h2 class="instrucoes-titulo mb-3">
+            Como jogar
+          </h2>
+
+          <ul class="instrucoes-lista">
+
+            <li>
+              <i class="bi bi-water me-2 text-info"></i>
+              O computador escondeu
+              <strong>3 navios</strong>
+              no tabuleiro
+            </li>
+
+            <li>
+              <i class="bi bi-cursor me-2 text-warning"></i>
+              Clique nas células para atirar
+            </li>
+
+            <li>
+              <i class="bi bi-bullseye me-2 text-danger"></i>
+              Célula vermelha = acerto
+            </li>
+
+            <li>
+              <i class="bi bi-circle me-2 text-secondary"></i>
+              Célula cinza = água
+            </li>
+
+            <li>
+              <i class="bi bi-trophy me-2 text-warning"></i>
+              Afunde os 3 navios para vencer!
+            </li>
+
+          </ul>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </main>
+
+
+  <!-- Bootstrap JS -->
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+  </script>
+
+  <!-- Script -->
+  <script src="script.js"></script>
+
+</body>
+</html>

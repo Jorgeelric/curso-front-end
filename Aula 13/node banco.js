@@ -61,6 +61,7 @@ const btnAlterar = document.querySelector('#btn-alterar')
 
 const elTitular = document.querySelector('#titular')
 
+const status = document.querySelector('#status-conta')
 
 
 // ===============================
@@ -124,7 +125,9 @@ btnSacar.addEventListener('click', () => {
 
 
 // Quando clicar no botão bloquear/desbloquear
-btnBloquear.addEventListener('click', bloquearConta)
+btnBloquear.addEventListener('click', bloquearConta, () => {
+    
+})
 
 
 // ===============================

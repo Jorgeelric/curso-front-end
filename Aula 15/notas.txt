@@ -1,0 +1,12 @@
+npm create vite@latest . -- --template react
+
+para cancelar a operação é usar o atalho crtl + cancelar
+
+E para voltar a aplicação é usar o comando npm run dev
+
+npm install, para instalar o node module para o visual studio code de casa. 
+
+É uma boa prática criar a função com o mesmo nome do arquivo. Em jsx o nome da função, a primeira letra tem que estar sempre com letra maiúscula. Após de criar a função é 
+sempre necessário exportar do arquivo criado e importar onde vai exibir.
+
+Então dentro do return só fica o html e o html. Para criar varáveis fica fora do return

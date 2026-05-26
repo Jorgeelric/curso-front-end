@@ -4,7 +4,7 @@ const funcionarios = [
       cargo: 'Analista em Pericia Digital',
       empresa: 'Deloitte',
       bio: 'Jorge Gàlddino | Perito Computacional Forense e Assistente Técnico. Especialista em investigação digital, auditoria de sistemas e validação de provas eletrônicas para o meio judicial e corporativo.',
-      foto: 'https://randomuser.me/api/portraits/men/32.jpg',
+      foto: 'https://media.licdn.com/dms/image/v2/D5603AQHd8wGKNpn1YA/profile-displayphoto-scale_400_400/B56Z14YlR8KkAg-/0/1775841205487?e=1781136000&v=beta&t=Lz9FYi_OCLzVQZF4MRMrqld9TQP_XJx3-vPHkiZ3RyQ',
       habilidades: [
         'Perícia Computacional',
         'Investigação Digital',

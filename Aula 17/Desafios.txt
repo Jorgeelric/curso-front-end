@@ -1,0 +1,17 @@
+DESAFIOS
+
+Nível 1:
+Adicione um botão "Limpar" que reseta todos
+os campos do formulário de volta ao estado inicial.
+Dica: chame todos os setters com string vazia.
+
+Nível 2:
+Adicione um contador de caracteres abaixo do
+campo de mensagem — "X / 200 caracteres".
+Use o .length do estado mensagem.
+Impeça o envio se a mensagem tiver menos de 20 caracteres.
+
+Nível 3:
+Adicione um campo "Serviço" como select controlado
+com as opções: Landing Page, Site Institucional, E-commerce.
+Inclua o serviço escolhido na mensagem de sucesso.

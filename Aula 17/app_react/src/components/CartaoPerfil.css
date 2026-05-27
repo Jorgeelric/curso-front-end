@@ -1,0 +1,67 @@
+.cartao {
+    background: white;
+    border-radius: 12px;
+    padding: 32px;
+    max-width: 320px;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    font-family: sans-serif;
+  }
+  
+  .cartao-foto {
+    border-radius: 50%;
+    margin-bottom: 16px;
+  }
+  
+  .cartao-nome {
+    font-size: 1.4rem;
+    color: #004a99;
+    margin: 0 0 4px;
+  }
+  
+  .cartao-cargo {
+    color: #636e72;
+    font-size: 0.9rem;
+    margin: 0 0 12px;
+  }
+  
+  .cartao-bio {
+    color: #2d3436;
+    font-size: 0.875rem;
+    line-height: 1.6;
+  }
+
+  .cartao img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .cartao li {
+    list-style: none;
+  }
+
+.cartao-habilidades {
+  background-color: #004a99;
+  padding: 10px;
+  border-radius: 8px;
+  color: black;
+}
+
+.habilidades {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 15px;
+}
+
+.tag {
+    background: #636e72;
+    padding: 6px 12px;
+    border-radius: 20px;
+    color: white;
+}
+
+.tag:hover {
+  background-color: #004a99;
+}
+

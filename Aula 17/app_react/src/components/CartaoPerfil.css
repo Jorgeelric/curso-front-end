@@ -65,3 +65,77 @@
   background-color: #004a99;
 }
 
+.container-form {
+  min-height: 100vh; /* Ocupa a altura inteira da tela */
+  display: flex; /* Ativa o flexbox */
+  justify-content: center; /* Centraliza na horizontal */
+  align-items: center; /* Centraliza na vertical */
+}
+
+.form {
+  display: flex; /* Transforma o formulário em um container flexível */
+  flex-direction: column; /* Coloca os elementos do formulário um embaixo do outro */
+  gap: 16px; /* Cria um espaço de 16px entre os elementos do formulário */
+
+  width: 100%; /* Faz o formulário ocupar toda a largura disponível */
+  max-width: 400px; /* Limita a largura máxima do formulário a 400px */
+  padding: 24px; /* Cria um espaço interno dentro do formulário */
+
+  background-color: #f9f9f9; /* Define uma cor de fundo clara para o formulário */
+  border: 1px solid #ddd; /* Adiciona uma borda cinza clara ao redor do formulário */
+  border-radius: 8px; /* Arredonda os cantos do formulário */
+}
+
+.form label {
+  display: flex; /* Transforma cada label em um container flexível */
+  flex-direction: column; /* Coloca o texto do label acima do input/select */
+  gap: 6px; /* Cria um pequeno espaço entre o texto e o campo */
+
+  font-weight: 600; /* Deixa o texto do label um pouco mais forte */
+  color: #333; /* Define a cor do texto do label */
+}
+
+.form input,
+.form select {
+  padding: 10px 12px; /* Cria espaço interno dentro dos campos */
+  border: 1px solid #ccc; /* Adiciona uma borda cinza aos campos */
+  border-radius: 6px; /* Arredonda os cantos dos inputs e do select */
+  font-size: 14px; /* Define o tamanho do texto dentro dos campos */
+}
+
+.form input:focus,
+.form select:focus {
+  outline: none; /* Remove a borda padrão do navegador ao clicar no campo */
+  border-color: #2563eb; /* Muda a cor da borda quando o campo está selecionado */
+}
+
+.form p {
+  margin: 0; /* Remove a margem padrão do parágrafo */
+  font-size: 13px; /* Define um tamanho menor para o texto dos caracteres */
+  font-weight: 400; /* Define o peso normal da fonte */
+  color: #666; /* Define uma cor cinza para o texto */
+}
+
+.form button {
+  padding: 10px 14px; /* Cria espaço interno dentro do botão */
+  border: none; /* Remove a borda padrão do botão */
+  border-radius: 6px; /* Arredonda os cantos do botão */
+  background-color: #2563eb; /* Define a cor de fundo azul do botão */
+  color: white; /* Define a cor do texto do botão como branco */
+  font-size: 15px; /* Define o tamanho do texto do botão */
+  font-weight: 600; /* Deixa o texto do botão mais forte */
+  cursor: pointer; /* Mostra a mãozinha ao passar o mouse no botão */
+}
+
+.form button:hover {
+  background-color: #1d4ed8; /* Escurece o botão quando passa o mouse por cima */
+}
+
+.form button[type="reset"] {
+  background-color: #e5e7eb; /* Define uma cor cinza para o botão de limpar */
+  color: #333; /* Define a cor do texto do botão limpar */
+}
+
+.form button[type="reset"]:hover {
+  background-color: #d1d5db; /* Escurece o botão limpar ao passar o mouse por cima */
+}

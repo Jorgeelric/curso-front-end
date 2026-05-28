@@ -6,6 +6,7 @@ function FormContato() {
     const [mensagem, setMensagem] = useState('')
     const [enviado, setEnviado] = useState(false)
     const [caractere, setCaractere] = useState(0)
+    const [servico, setServico] = useState('')
 
     function handleSubmit(e) {
 
@@ -54,6 +55,7 @@ function FormContato() {
             <div>
                 <h2>Mensagem enviada com sucesso</h2>
                 <p>Obrigado por entrar em contato, {nome}!</p>
+                <p>Retornaremos para falar sobre o serviço: {servico}</p>
                 <button onClick={() => {
                     setEnviado(false);
                     setNome('');
@@ -67,7 +69,8 @@ function FormContato() {
     }
 
     return (
-        <form onSubmit={handleSubmit}>
+        <div className="container-form">
+            <form className="form" onSubmit={handleSubmit}>
 
             <label>
                 Nome:
@@ -95,24 +98,37 @@ function FormContato() {
                 <p>Caracteres: {caractere}</p>
             </label>
 
-            <label>
                 <button type="submit">Enviar</button>
-            </label>
-
-            <label>
+            
                 <button
                     type="reset"
                     onClick={() => {
                         setNome('')
                         setEmail('')
                         setMensagem('')
+                        setCaractere(0)
                     }}
                 >
                     Limpar
                 </button>
+            
+            <label htmlFor="servico" >
+                Seviço 
+                <select 
+                id="servico"
+                value={servico}
+                onChange={(event) => setServico(event.target.value)}
+                >
+                    <option value="">Selecione</option>
+                    <option value="Landing Page">Lange Page</option>
+                    <option value="Site Institucional">Site Institucional</option>
+                    <option value="E-commerce">E-commerce</option>   
+                </select>
             </label>
 
         </form>
+        </div>
+        
     )
 }
 

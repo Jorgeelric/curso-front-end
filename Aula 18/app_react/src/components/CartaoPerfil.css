@@ -1,0 +1,239 @@
+/* =========================
+   CARTÃO PRINCIPAL
+========================= */
+
+.cartao {
+    background: white; /* Define a cor de fundo do cartão como branca */
+    border-radius: 12px; /* Arredonda os cantos do cartão */
+    padding: 32px; /* Cria um espaçamento interno de 32px */
+    max-width: 320px; /* Limita a largura máxima do cartão */
+    text-align: center; /* Centraliza o texto horizontalmente */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08); /* Adiciona uma sombra suave ao redor do cartão */
+    font-family: sans-serif; /* Define uma fonte sem serifa */
+}
+
+/* =========================
+   FOTO DO CARTÃO
+========================= */
+
+.cartao-foto {
+    border-radius: 50%; /* Deixa a imagem redonda */
+    margin-bottom: 16px; /* Adiciona espaço abaixo da foto */
+}
+
+/* =========================
+   NOME DO USUÁRIO
+========================= */
+
+.cartao-nome {
+    font-size: 1.4rem; /* Define o tamanho da fonte */
+    color: #004a99; /* Define a cor azul do texto */
+    margin: 0 0 4px; /* Remove margem superior e adiciona 4px abaixo */
+}
+
+/* =========================
+   CARGO DO USUÁRIO
+========================= */
+
+.cartao-cargo {
+    color: #636e72; /* Define uma cor cinza */
+    font-size: 0.9rem; /* Define um tamanho menor para o texto */
+    margin: 0 0 12px; /* Adiciona espaço abaixo do cargo */
+}
+
+/* =========================
+   BIOGRAFIA / DESCRIÇÃO
+========================= */
+
+.cartao-bio {
+    color: #2d3436; /* Define a cor do texto */
+    font-size: 0.875rem; /* Define um tamanho pequeno para o texto */
+    line-height: 1.6; /* Aumenta o espaçamento entre linhas */
+}
+
+/* =========================
+   IMAGEM DO CARTÃO
+========================= */
+
+.cartao img {
+    width: 100px; /* Define largura fixa da imagem */
+    height: 100px; /* Define altura fixa da imagem */
+}
+
+/* =========================
+   ITENS DA LISTA
+========================= */
+
+.cartao li {
+    list-style: none; /* Remove as bolinhas da lista */
+}
+
+/* =========================
+   ÁREA DAS HABILIDADES
+========================= */
+
+.cartao-habilidades {
+  background-color: #004a99; /* Define fundo azul */
+  padding: 10px; /* Adiciona espaço interno */
+  border-radius: 8px; /* Arredonda os cantos */
+  color: black; /* Define a cor do texto */
+}
+
+/* =========================
+   CONTAINER DAS TAGS
+========================= */
+
+.habilidades {
+    display: flex; /* Ativa o flexbox */
+    gap: 10px; /* Cria espaçamento entre os itens */
+    flex-wrap: wrap; /* Permite quebrar linha caso não caiba */
+    margin-top: 15px; /* Adiciona margem acima */
+}
+
+/* =========================
+   TAG INDIVIDUAL
+========================= */
+
+.tag {
+    background: #636e72; /* Define fundo cinza */
+    padding: 6px 12px; /* Espaçamento interno */
+    border-radius: 20px; /* Deixa a tag arredondada */
+    color: white; /* Define o texto branco */
+}
+
+/* =========================
+   EFEITO HOVER DA TAG
+========================= */
+
+.tag:hover {
+  background-color: #004a99; /* Muda a cor ao passar o mouse */
+}
+
+/* =========================
+   CONTAINER DO FORMULÁRIO
+========================= */
+
+.container-form {
+  margin-top: 45px; /* Adiciona espaço acima do formulário */
+  display: flex; /* Ativa o flexbox */
+  justify-content: center; /* Centraliza horizontalmente */
+  align-items: center; /* Centraliza verticalmente */
+}
+
+/* =========================
+   FORMULÁRIO
+========================= */
+
+.form {
+  display: flex; /* Define layout flexível */
+  flex-direction: column; /* Coloca os elementos em coluna */
+  gap: 16px; /* Espaçamento entre os elementos */
+
+  width: 100%; /* Faz ocupar toda a largura disponível */
+  max-width: 400px; /* Limita a largura máxima */
+  padding: 24px; /* Espaçamento interno */
+
+  background-color: #f9f9f9; /* Cor de fundo clara */
+  border: 1px solid #ddd; /* Borda cinza clara */
+  border-radius: 8px; /* Cantos arredondados */
+}
+
+/* =========================
+   LABELS DO FORMULÁRIO
+========================= */
+
+.form label {
+  display: flex; /* Transforma a label em flexbox */
+  flex-direction: column; /* Coloca texto acima do campo */
+  gap: 6px; /* Espaçamento entre texto e input */
+
+  font-weight: 600; /* Texto seminegrito */
+  color: #333; /* Cor escura */
+}
+
+/* =========================
+   INPUTS E SELECTS
+========================= */
+
+.form input,
+.form select {
+  padding: 10px 12px; /* Espaço interno dos campos */
+  border: 1px solid #ccc; /* Borda cinza */
+  border-radius: 6px; /* Arredonda os cantos */
+  font-size: 14px; /* Define tamanho da fonte */
+}
+
+/* =========================
+   INPUTS EM FOCO
+========================= */
+
+.form input:focus,
+.form select:focus {
+  outline: none; /* Remove a borda padrão do navegador */
+  border-color: #2563eb; /* Destaca a borda em azul */
+}
+
+/* =========================
+   TEXTO AUXILIAR
+========================= */
+
+.form p {
+  margin: 0; /* Remove margens padrão */
+  font-size: 13px; /* Tamanho pequeno da fonte */
+  font-weight: 400; /* Peso normal da fonte */
+  color: #666; /* Cor cinza */
+}
+
+/* =========================
+   BOTÕES
+========================= */
+
+.form button {
+  padding: 10px 14px; /* Espaçamento interno */
+  border: none; /* Remove a borda padrão */
+  border-radius: 6px; /* Arredonda os cantos */
+  background-color: #2563eb; /* Fundo azul */
+  color: white; /* Texto branco */
+  font-size: 15px; /* Tamanho da fonte */
+  font-weight: 600; /* Texto seminegrito */
+  cursor: pointer; /* Mostra a mãozinha ao passar o mouse */
+}
+
+/* =========================
+   HOVER DO BOTÃO
+========================= */
+
+.form button:hover {
+  background-color: #1d4ed8; /* Escurece o botão no hover */
+}
+
+/* =========================
+   BOTÃO RESET
+========================= */
+
+.form button[type="reset"] {
+  background-color: #e5e7eb; /* Fundo cinza claro */
+  color: #333; /* Texto escuro */
+}
+
+/* =========================
+   HOVER DO RESET
+========================= */
+
+.form button[type="reset"]:hover {
+  background-color: #d1d5db; /* Escurece o botão reset */
+}
+
+.filtro input {
+  margin-bottom: 20px;
+  width: 30%;
+  height: 20px;
+  border-radius: 8px;
+  padding: 5px;
+  background-color: #F3F4F6;
+  color: black;
+}
+
+.filtro ::placeholder {
+  color: #6B7280; 
+}
